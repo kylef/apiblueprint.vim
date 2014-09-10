@@ -6,6 +6,16 @@ Blueprint](http://apiblueprint.org).
 
 ## Installation
 
+### With [vim-plug](https://github.com/junegunn/vim-plug)
+
+Add:
+
+```
+Plug 'kylef/apiblueprint.vim'
+```
+
+To your `.vimrc` and run `PlugInstall` inside vim.
+
 ### With [Vundle](https://github.com/gmarik/vundle)
 
 Add:
