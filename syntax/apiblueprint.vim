@@ -8,10 +8,10 @@ syntax match apibMarkdownMetadataValue /:.*/ contained
 
 highlight link apibMarkdownMetadataKey Function
 
-syntax region apibRequestSection start=/^+ Request (.*)$/ end=/$/ oneline
+syntax region apibRequestSection start=/^+ Request/ end=/$/ oneline
 highlight link apibRequestSection Function
 
-syntax region apibResponseSection start=/^+ Response \d\d\d (.*)$/ end=/$/ oneline
+syntax region apibResponseSection start=/^+ Response \d\d\d \(.*\)$/ end=/$/ oneline
 highlight link apibResponseSection Function
 
 syntax region apibHeadersSection start=/^+ Headers$/ end=/^\S.*$/ contains=apibHeadersSectionKey,apibHeadersSectionValue
