@@ -8,6 +8,9 @@ syntax match apibMarkdownMetadataValue /:.*/ contained
 
 highlight link apibMarkdownMetadataKey Function
 
+syntax region apibModelSection start=/^+ Model/ end=/$/ oneline
+highlight link apibModelSection Function
+
 syntax region apibRequestSection start=/^+ Request/ end=/$/ oneline
 highlight link apibRequestSection Function
 
