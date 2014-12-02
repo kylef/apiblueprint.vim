@@ -4,6 +4,8 @@ apiblueprint.vim
 This vim plugin brings syntax highlighting and linting for [API
 Blueprint](http://apiblueprint.org).
 
+![](screenshots/screen.png)
+
 ## Installation
 
 ### With [vim-plug](https://github.com/junegunn/vim-plug)
