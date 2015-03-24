@@ -23,11 +23,11 @@ To your `.vimrc` and run `PlugInstall` inside vim.
 Add:
 
 ```
-Bundle 'kylef/apiblueprint.vim'
+Plugin 'kylef/apiblueprint.vim'
 ```
 
-To your `.vimrc` and run `BundleInstall` from within vim or `vim
-+BundleInstall +qall` from the command line
+To your `.vimrc` and run `PluginInstall` from within vim or `vim
++PluginInstall +qall` from the command line
 
 ### With [Pathogen](https://github.com/tpope/vim-pathogen)
 
