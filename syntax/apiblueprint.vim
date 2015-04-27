@@ -6,21 +6,24 @@ syntax region apibMarkdownMetadata start=/\%^.*:.*$/ end=/^$/ contains=apibMarkd
 syntax match apibMarkdownMetadataKey /^[^:]*\ze:/ contained
 syntax match apibMarkdownMetadataValue /:.*/ contained
 
-highlight link apibMarkdownMetadataKey Function
+syntax region apibHTTPStatusCode start=/\d\d\d/ end=// contained containedin=apibResponseSection
+syntax region apibHTTPContentType start=/(.*)/ end=// contained containedin=apibResponseSection
 
 syntax region apibModelSection start=/^+ Model/ end=/$/ oneline
-highlight link apibModelSection Function
-
-syntax region apibRequestSection start=/^+ Request/ end=/$/ oneline
-highlight link apibRequestSection Function
-
-syntax region apibResponseSection start=/^+ Response \d\d\d \(.*\)$/ end=/$/ oneline
-highlight link apibResponseSection Function
-
+syntax region apibRequestSection start=/^[-+*] Request.*/ end=/^$/ contains=apibHTTPContentType
+syntax region apibResponseSection start=/^[-+*] Response \d\d\d \(.*\)$/ end=/^$/ contains=apibHTTPStatusCode,apibHTTPContentType
 syntax region apibHeadersSection start=/^+ Headers$/ end=/^\S.*$/ contains=apibHeadersSectionKey,apibHeadersSectionValue
+
 syntax match apibHeadersSectionKey /^[^:]*\ze:/ contained
 syntax match apibHeadersSectionValue /:.*/ contained
-highlight link apibHeadersSectionKey Function
+
+highlight default link apibMarkdownMetadataKey Function
+highlight default link apibRequestSection Function
+highlight default link apibResponseSection Function
+highlight default link apibModelSection Function
+highlight default link apibHeadersSectionKey Function
+highlight default link apibHTTPStatusCode Delimiter
+highlight default link apibHTTPContentType Comment
 
 let b:current_syntax = 'apiblueprint'
 
