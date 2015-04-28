@@ -11,7 +11,7 @@ syntax region apibHTTPContentType start=/(.*)/ end=// contained containedin=apib
 
 syntax region apibModelSection start=/^+ Model/ end=/$/ oneline
 syntax region apibRequestSection start=/^[-+*] Request.*/ end=/^$/ contains=apibHTTPContentType
-syntax region apibResponseSection start=/^[-+*] Response \d\d\d \(.*\)$/ end=/^$/ contains=apibHTTPStatusCode,apibHTTPContentType
+syntax region apibResponseSection start=/^[-+*] Response \d\d\d/ end=/^$/ contains=apibHTTPStatusCode,apibHTTPContentType
 syntax region apibHeadersSection start=/^+ Headers$/ end=/^\S.*$/ contains=apibHeadersSectionKey,apibHeadersSectionValue
 
 syntax match apibHeadersSectionKey /^[^:]*\ze:/ contained
