@@ -14,6 +14,9 @@ syntax region apibRequestSection start=/^[-+*] Request.*/ end=/^$/ contains=apib
 syntax region apibResponseSection start=/^[-+*] Response \d\d\d/ end=/^$/ contains=apibHTTPStatusCode,apibHTTPContentType
 syntax region apibHeadersSection start=/^+ Headers$/ end=/^\S.*$/ contains=apibHeadersSectionKey,apibHeadersSectionValue
 
+syntax region apibActionRelationKey start=/: .*/ end=/$/ contained
+syntax region apibActionRelation start=/^[-+*] Relation: .*$/ end=/$/ oneline contains=apibActionRelationKey
+
 syntax match apibHeadersSectionKey /^[^:]*\ze:/ contained
 syntax match apibHeadersSectionValue /:.*/ contained
 
@@ -24,6 +27,8 @@ highlight default link apibModelSection Function
 highlight default link apibHeadersSectionKey Function
 highlight default link apibHTTPStatusCode Delimiter
 highlight default link apibHTTPContentType Comment
+highlight default link apibActionRelation Function
+highlight default link apibActionRelationKey Identifier
 
 let b:current_syntax = 'apiblueprint'
 
