@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+echo "Updating screenshot"
+
+osascript <<END
+tell application "iTerm"
+  activate
+
+  set myterm to (make new terminal)
+
+  tell myterm
+    set mysession to (make new session at the end of sessions)
+    set number of columns to 82
+    set number of rows to 30
+
+    tell mysession
+      exec command "vim $(pwd)/screenshots/blueprint.md"
+    end tell
+  end tell
+end tell
+END
+
+screencapture -w screenshots/screen.png
