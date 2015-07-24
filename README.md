@@ -6,6 +6,21 @@ Blueprint](http://apiblueprint.org).
 
 ![](screenshots/screen.png)
 
+## Usage
+
+The plugin adds an `apiblueprint` file type along with an `apiblueprint`
+syntax.
+
+### Apiary
+
+You can use the [apiary client](https://github.com/apiaryio/apiary-client) with
+this plugin to load a blueprint from Apiary directly providing apiary client is
+installed and configured.
+
+```shell
+$ vim apiary:pollsapi
+```
+
 ## Installation
 
 ### With [vim-plug](https://github.com/junegunn/vim-plug)
