@@ -6,9 +6,18 @@ function! FetchBlueprint()
   normal gg
 endfunction
 
+function! PublishBlueprint()
+  let api_name = split(expand("%"), ':')[1]
+  let blueprint = join(getline(1, '$'), "\n")
+  let result = system("apiary publish --path=/dev/fd/0 --api-name=" . shellescape(api_name), blueprint)
+  echomsg result
+endfunction
+
 augroup Apiary
   au!
   au BufReadCmd apiary:* call FetchBlueprint()
   au FileReadCmd apiary:* call FetchBlueprint()
+  au BufWriteCmd apiary:* call PublishBlueprint()
+  au FileWriteCmd apiary:* call PublishBlueprint()
 augroup END
 
