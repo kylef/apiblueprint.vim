@@ -4,7 +4,7 @@ apiblueprint.vim
 This vim plugin brings syntax highlighting and linting for [API
 Blueprint](http://apiblueprint.org).
 
-![](screenshots/screen.png)
+![API Blueprint Plugin Screenshot](screenshots/screen.png)
 
 ## Usage
 
@@ -50,4 +50,18 @@ To your `.vimrc` and run `PluginInstall` from within vim or `vim
 $ cd ~/.vim/bundle
 $ git clone https://github.com/kylef/apiblueprint.vim.git
 ```
+
+## Linting
+
+Using [syntastic](https://github.com/scrooloose/syntastic), your API Blueprint
+can be linted on each save.
+
+![API Blueprint Linting](screenshots/lint.png)
+
+### Installation
+
+- Install [drafter](https://github.com/apiaryio/drafter#install)
+- Install [syntastic](https://github.com/scrooloose/syntastic#2-installation)
+    Note: You can install this the same way you installed the API Blueprint
+    plugin.
 
