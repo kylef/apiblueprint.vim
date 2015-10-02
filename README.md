@@ -27,7 +27,7 @@ $ vim apiary:pollsapi
 
 Add:
 
-```
+```viml
 Plug 'kylef/apiblueprint.vim'
 ```
 
@@ -37,7 +37,7 @@ To your `.vimrc` and run `PlugInstall` inside vim.
 
 Add:
 
-```
+```viml
 Plugin 'kylef/apiblueprint.vim'
 ```
 
@@ -46,7 +46,7 @@ To your `.vimrc` and run `PluginInstall` from within vim or `vim
 
 ### With [Pathogen](https://github.com/tpope/vim-pathogen)
 
-```bash
+```shell
 $ cd ~/.vim/bundle
 $ git clone https://github.com/kylef/apiblueprint.vim.git
 ```
