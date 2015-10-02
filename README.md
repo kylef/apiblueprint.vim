@@ -47,8 +47,7 @@ To your `.vimrc` and run `PluginInstall` from within vim or `vim
 ### With [Pathogen](https://github.com/tpope/vim-pathogen)
 
 ```shell
-$ cd ~/.vim/bundle
-$ git clone https://github.com/kylef/apiblueprint.vim.git
+$ git clone https://github.com/kylef/apiblueprint.vim.git ~/.vim/bundle/apiblueprint.vim
 ```
 
 ## Linting
