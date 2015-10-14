@@ -1,15 +1,21 @@
-apiblueprint.vim
-================
+# apiblueprint.vim
 
 This vim plugin brings syntax highlighting and linting for [API
 Blueprint](http://apiblueprint.org).
 
-![API Blueprint Plugin Screenshot](screenshots/screen.png)
+![API Blueprint Plugin Screenshot](screenshots/syntax.png)
 
 ## Usage
 
 The plugin adds an `apiblueprint` file type along with an `apiblueprint`
 syntax.
+
+### Linting
+
+Using [syntastic](https://github.com/scrooloose/syntastic), your API Blueprint
+can be linted on each save. For this, you will need to install both
+[drafter](https://github.com/apiaryio/drafter#install) and
+[syntastic](https://github.com/scrooloose/syntastic#2-installation).
 
 ### Apiary
 
@@ -21,9 +27,17 @@ installed and configured.
 $ vim apiary:pollsapi
 ```
 
+### Refract
+
+Providing you have [drafter](https://github.com/apiaryio/drafter#install)
+installed. You can use `ctrl` + `b` to generate a preview of the Refract
+structure for your API Blueprint in a split.
+
+![](screenshots/refract.png)
+
 ## Installation
 
-### With [vim-plug](https://github.com/junegunn/vim-plug)
+### With [vim-plug](https://github.com/junegunn/vim-plug) (recommended)
 
 Add:
 
@@ -49,18 +63,3 @@ To your `.vimrc` and run `PluginInstall` from within vim or `vim
 ```shell
 $ git clone https://github.com/kylef/apiblueprint.vim.git ~/.vim/bundle/apiblueprint.vim
 ```
-
-## Linting
-
-Using [syntastic](https://github.com/scrooloose/syntastic), your API Blueprint
-can be linted on each save.
-
-![API Blueprint Linting](screenshots/lint.png)
-
-### Installation
-
-- Install [drafter](https://github.com/apiaryio/drafter#install)
-- Install [syntastic](https://github.com/scrooloose/syntastic#2-installation)
-    Note: You can install this the same way you installed the API Blueprint
-    plugin.
-
