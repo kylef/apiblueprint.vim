@@ -1,4 +1,7 @@
 --langdef=apiblueprint
 --langmap=apiblueprint:.apib
---regex-apiblueprint=/^#[ \t]+Group[ \t]+(.*)/\1/g,Groups/
---regex-apiblueprint=/^##[ \t]+(.*)[ \t]+\[(.*)\]/\1 - \2/r,Resources/
+--regex-apiblueprint=/^#[ ]+(.*)/Introduction/z,API/
+--regex-apiblueprint=/^#+[ ]+Group[ ]+(.*)/\1/g,Resource Group/
+--regex-apiblueprint=/^##[ ]+(.*)[ ]+\[([^[:space:]]+)\]/\1 - \2/r,Resource/
+--regex-apiblueprint=/^##[ ]+(.*)[ ]+\[([A-Z]+) (.*)\]/\1 - \2 \3/a,Action/
+--regex-apiblueprint=/^###[ ]+(.*)[ ]+\[([A-Z]+)\]/\1 - \2/a,Action/

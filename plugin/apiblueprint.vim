@@ -62,13 +62,13 @@ endfunction
 
 autocmd FileType apiblueprint nnoremap <C-b> :call GenerateRefract()<cr>
 
-if exists(':Tagbar')
-  let g:tagbar_type_apiblueprint = {
-    \ 'ctagstype' : 'apiblueprint',
-    \ 'kinds'     : [
-      \ 'g:Groups',
-      \ 'r:Resources'
-    \ ],
-    \ 'deffile': expand('<sfile>:p:h:h') . '/ctags/apiblueprint.cnf'
-  \ }
-endif
+let g:tagbar_type_apiblueprint = {
+  \ 'ctagstype' : 'apiblueprint',
+  \ 'kinds'     : [
+    \ 'z:API',
+    \ 'g:Resource Group',
+    \ 'r:Resource',
+    \ 'a:Action'
+  \ ],
+  \ 'deffile': expand('<sfile>:p:h:h') . '/ctags/apiblueprint.cnf'
+\ }
