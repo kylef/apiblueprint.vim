@@ -35,6 +35,11 @@ structure for your API Blueprint in a split.
 
 ![](screenshots/refract.png)
 
+### TagBar
+
+If you have [TagBar](https://github.com/majutsushi/tagbar) installed you can use it 
+to list and jump to groups and resources.
+
 ## Installation
 
 ### With [vim-plug](https://github.com/junegunn/vim-plug) (recommended)

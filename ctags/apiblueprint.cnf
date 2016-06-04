@@ -1,0 +1,4 @@
+--langdef=apiblueprint
+--langmap=apiblueprint:.apib
+--regex-apiblueprint=/^#[ \t]+Group[ \t]+(.*)/\1/g,Groups/
+--regex-apiblueprint=/^##[ \t]+(.*)[ \t]+\[(.*)\]/\1 - \2/r,Resources/
