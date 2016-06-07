@@ -40,6 +40,10 @@ structure for your API Blueprint in a split.
 If you have [TagBar](https://github.com/majutsushi/tagbar) installed you can use it 
 to list and jump to groups and resources.
 
+### Snippets
+
+The are snippets in the snipMate format, supported by many Vim snippet plug-ins.
+
 ## Installation
 
 ### With [vim-plug](https://github.com/junegunn/vim-plug) (recommended)

@@ -1,0 +1,25 @@
+snippet api "FORMAT: 1A ... # Title"
+	FORMAT: 1A
+
+	# ${1:Title}
+
+	${2:Description for $1}
+snippet param "+ name:`example` (string, required) - description .. + Default: `value`"
+	+ ${1:name}: \`${2:example}\` (${3:type}, ${4:required}) - ${5:$1 description}
+		+ Default: \`${6:value}\`
+snippet req "+ Request <identifier> (application/json)"
+	+ Request ${1} (${2:application/json})
+
+			${3:{}}
+snippet res "+ Response 200 (..)"
+	+ Response ${1:200} (${2:application/json})
+
+			${0:{}}
+snippet rres "+ Request <identifier> (application/json) ... + Response 200 (application/json)"
+	+ Request ${1} (${2:application/json})
+
+			${3:{}}
+
+	+ Response ${4:200} (${4:$2})
+
+			${0:{}}
