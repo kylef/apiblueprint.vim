@@ -30,8 +30,15 @@ $ vim apiary:pollsapi
 ### Refract
 
 Providing you have [drafter](https://github.com/apiaryio/drafter#install)
-installed. You can use `ctrl` + `b` to generate a preview of the Refract
+installed. You can use `GenerateRefract` function to generate a preview of the Refract
 structure for your API Blueprint in a split.
+
+You can manually map this function to a keyboard shortcut. For example to
+`ctrl+b`:
+
+```viml
+autocmd FileType apiblueprint nnoremap <C-b> :call GenerateRefract()<cr>
+```
 
 ![](screenshots/refract.png)
 

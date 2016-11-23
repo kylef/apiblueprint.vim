@@ -60,8 +60,6 @@ function! s:PrintOutput(output)
   normal gg
 endfunction
 
-autocmd FileType apiblueprint nnoremap <C-b> :call GenerateRefract()<cr>
-
 let g:tagbar_type_apiblueprint = {
   \ 'ctagstype' : 'apiblueprint',
   \ 'kinds'     : [
